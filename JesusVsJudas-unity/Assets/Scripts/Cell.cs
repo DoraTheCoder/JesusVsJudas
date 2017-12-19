@@ -1,41 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Cell : MonoBehaviour {
 
-    public Sprite EmptySprite;
-    public Sprite JesusSprite;
-    public Sprite JudasSprite;
+    public Sprite emptySprite;
+    public Sprite jesusSprite;
+    public Sprite judasSprite;
 
-    public CellState State;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
+    private CellState _state = CellState.None;
+    public CellState state{
+        set {
+            _state = value;
+            _UpdateImage();
+        }
+        get {
+            return _state;
+        }
     }
 
-    private void UpdateImage() {
+    private void _UpdateImage() {
         Debug.Log("Update image");
-        if (State == CellState.jesus) {
-            transform.GetChild(0).GetComponent<Image>().sprite = JesusSprite;
-        } else if (State == CellState.judas) {
-            transform.GetChild(0).GetComponent<Image>().sprite = JudasSprite;
+        if (state == CellState.Jesus) {
+            transform.GetChild(0).GetComponent<Image>().sprite = jesusSprite;
+        } else if (state == CellState.Judas) {
+            transform.GetChild(0).GetComponent<Image>().sprite = judasSprite;
         }
     }
 
     public void ChangeCellState() {
-        State = GameManager.Instance.currentTurn;
-        UpdateImage();
-        GameManager.Instance.NextTurn();
+        GameManager.instance.OnClickCellAtIndex(transform.GetSiblingIndex());
     }
-
-
-
 }

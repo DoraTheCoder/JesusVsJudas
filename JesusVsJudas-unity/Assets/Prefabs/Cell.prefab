@@ -137,10 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f056b474c9dacd40a302910e39e8139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmptySprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  JesusSprite: {fileID: 21300000, guid: 5d8bdd152f9d7254f9a030edaa74b0ba, type: 3}
-  JudasSprite: {fileID: 21300000, guid: ed395474b8d3090489990b53ddd837b9, type: 3}
-  State: 0
+  emptySprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  jesusSprite: {fileID: 21300000, guid: 5ca948ff672b27f45ba932d5b7b124c4, type: 3}
+  judasSprite: {fileID: 21300000, guid: 6b0eb661e7c143d4ea3735037a7fc4ec, type: 3}
 --- !u!114 &114895085520157742
 MonoBehaviour:
   m_ObjectHideFlags: 1

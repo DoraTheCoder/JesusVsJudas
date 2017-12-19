@@ -1,0 +1,12 @@
+namespace MyNamespace.Subnamespace;
+class MyClass;
+public void MyMethod();
+private void _MyMethod();
+public bool myBool;
+private bool _myBool;
+public bool myProperty{get, set};
+public const bool kMyConst;
+
+{
+	int localVarialble;
+}
